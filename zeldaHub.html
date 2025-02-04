@@ -1,0 +1,1040 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Game Walkthroughs | Zelda Hub</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="shortcut icon" href="Images/Hylian-Shield-Icon.ico" type="image/x-icon">
+<link rel="icon" href="Images/Hylian-Shield-Icon.ico" type="image/x-icon">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="CSS/gamewalkthroughs.css">
+<style>
+html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
+.w3-sidebar {
+  z-index: 3;
+  width: 250px;
+  top: 43px;
+  bottom: 0;
+  height: inherit;
+}
+</style>
+</head>
+<body>
+
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-theme w3-top w3-left-align w3-large">
+    <a class="w3-bar-item w3-button w3-right w3-hide-large w3-hover-white w3-large w3-theme-l1" href="javascript:void(0)" onclick="w3_open()"><i class="fa fa-bars"></i></a>
+    <a href="gamewalkthroughs.html" class="w3-bar-item w3-button w3-theme-l1">Game Walkthroughs</a>
+    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Games</a>
+    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white">About</a>
+    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white">News</a>
+  </div>
+</div>
+
+<!-- Sidebar -->
+<nav class="w3-sidebar w3-bar-block w3-collapse w3-large w3-blue-gray w3-animate-left menuA" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-right w3-xlarge w3-padding-large w3-hover-black w3-hide-large" title="Close Menu">
+    <i class="fa fa-remove"></i>
+  </a>
+  <h4 class="w3-bar-item"><b>Menu</b></h4>
+  <button class="w3-bar-item w3-button tablink" onclick="openGame(event, 'theLegendOfZelda')"><a href="#theLegendOfZelda" class="menuA">The Legend of Zelda</a></button>
+  <button class="w3-bar-item w3-button tablink" onclick="openGame(event, 'theAdventureOfLink')"><a href="#theAdventureOfLink" class="menuA">The Adventure of Link</a></button>
+  <button class="w3-bar-item w3-button tablink" onclick="openGame(event, 'aLinkToThePast')"><a href="#aLinkToThePast" class="menuA">A Link to the Past</a></button>
+  <button class="w3-bar-item w3-button tablink" onclick="openGame(event, 'linksAwakening')"><a href="#linksAwakening" class="menuA">Link's Awakening</a></button>
+  <button class="w3-bar-item w3-button tablink" onclick="openGame(event, 'ocarinaOfTime')"><a href="#ocarinaOfTime" class="menuA">Ocarina of Time</a></button>
+  <button class="w3-bar-item w3-button tablink" onclick="openGame(event, 'majorasMask')"><a href="#majorasMask" class="menuA">Majora's Mask</a></button>
+  <button class="w3-bar-item w3-button tablink" onclick="openGame(event, 'oracleOfSeasons')"><a href="#oracleOfSeasons" class="menuA">Oracle of Seasons</a></button>
+  <button class="w3-bar-item w3-button tablink" onclick="openGame(event, 'oracleOfAges')"><a href="#oracleOfAges" class="menuA">Oracle of Ages</a></button>
+  <button class="w3-bar-item w3-button tablink" onclick="openGame(event, 'theWindWaker')"><a href="#theWindWaker" class="menuA">The Wind Waker</a></button>
+  <button class="w3-bar-item w3-button tablink" onclick="openGame(event, 'theMinishCap')"><a href="#theMinishCap" class="menuA">The Minish Cap</a></button>
+  <button class="w3-bar-item w3-button tablink" onclick="openGame(event, 'twilightPrincess')"><a href="#twilightPrincess" class="menuA">Twilight Princess</a></button>
+  <button class="w3-bar-item w3-button tablink" onclick="openGame(event, 'phantomHourglass')"><a href="#phantomHourglass" class="menuA">Phantom Hourglass</a></button>
+  <button class="w3-bar-item w3-button tablink" onclick="openGame(event, 'spiritTracks')"><a href="#spiritTracks" class="menuA">Spirit Tracks</a></button>
+  <button class="w3-bar-item w3-button tablink" onclick="openGame(event, 'skywardSword')"><a href="#skywardSword" class="menuA">Skyward Sword</a></button>
+  <button class="w3-bar-item w3-button tablink" onclick="openGame(event, 'linkBetweenWorlds')"><a href="#linkBetweenWorlds" class="menuA">Link Between Worlds</a></button>
+  <button class="w3-bar-item w3-button tablink" onclick="openGame(event, 'breathOfTheWild')"><a href="#breathOfTheWild" class="menuA">Breath of the Wild</a></button>
+  <button class="w3-bar-item w3-button tablink" onclick="openGame(event, 'tearsOfTheKingdom')"><a href="#tearsOfTheKingdom" class="menuA">Tears of the Kingdom</a></button>
+  <button class="w3-bar-item w3-button tablink" onclick="openGame(event, 'echoesOfWisdom')"><a href="#echoesOfWisdom" class="menuA">Echoes of Wisdom</a></button>
+</nav>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- Main content: shift it to the right by 250 pixels when the sidebar is visible -->
+<div class="w3-main" style="margin-left:250px">
+  <div class="w3-padding-64 w3-black">
+    <div class="w3-container w3-center">
+      <h1 class="w3-center w3-xxxlarge">Zelda Hub</h1>
+      <img src="Images/Legend_Of_Zelda_Background.jpg" class="w3-image" style="height: 400px;" alt="Zelda background">
+      
+      <p class="w3-xlarge">Welcome to the Zelda hub of Game Walkthroughs.</p>
+    </div>
+  </div>
+    <!--The Legend of Zelda-->
+  <div id="theLegendOfZelda" class="w3-row w3-container w3-light-grey w3-padding-64 game legendOfZeldaNESBg" style="display:none">
+    <div class="w3-container w3-twothird">
+      <div class="w3-container w3-order w3-margin-bottom">
+        <h1 class="w3-text-sand w3-center w3-xxxlarge w3-black w3-round-xxlarge">The Legend of Zelda</h1>
+        <h2 class="w3-text-amber w3-xxlarge w3-red w3-round-xxlarge w3-center">STORY</h2>
+        <p class="w3-large w3-blue-gray w3-padding w3-round-xlarge">
+          The small kingdom of Hyrule is engulfed by chaos when an army led by Ganon, the prince of darkness, invades and steals the Triforce of Power, 
+          one part of a magical artifact which alone bestows great strength. In an attempt to prevent him from acquiring the Triforce of Wisdom,
+          Princess Zelda splits it into eight fragments and hides them in secret underground dungeons. Before eventually being kidnapped by Ganon,
+          she commands her nursemaid Impa to find someone courageous enough to save the kingdom. While wandering the land, the old woman is surrounded by Gannon's henchmen,
+          when a young boy named Link appears and rescues her. Upon hearing Impa's plea, he resolves to save Zelda and sets out to reassemble the scattered fragments of the Triforce of Wisdom,
+          with which Ganon can then be defeated. 
+        </p>
+      </div>      
+      <table class="w3-table-all w3-card-4" style="width: 80%;">
+        <tr class="w3-black">
+          <th class="w3-center" colspan="2">Release</th>
+        </tr>
+        <tr>
+          <td class="w3-blue-gray">Platform</td>
+          <td class="w3-border">NES</td>
+        </tr>
+        <tr>
+          <td class="w3-blue-gray">Date</td>
+          <td class="w3-border">August 22, 1987</td>
+        </tr>
+        <tr class="w3-black">
+          <th class="w3-center" colspan="2">Credits</th>
+        </tr>
+        <tr>
+          <td class="w3-blue-gray">Developer</td>
+          <td class="w3-border">Nintendo EAD</td>
+        </tr>
+        <tr>
+          <td class="w3-blue-gray">Publisher</td>
+          <td class="w3-border">Nintendo Co., Ltd</td>
+        </tr>
+        <tr>
+          <td class="w3-blue-gray">Producer</td>
+          <td class="w3-border">Shigeru Miyamoto</td>
+        </tr>
+        <tr>
+          <td class="w3-blue-gray">Director</td>
+          <td class="w3-border">Shigeru Miyamoto, Takashi Tezuka</td>
+        </tr>
+        <tr class="w3-black">
+          <th class="w3-center" colspan="2">Guide</th>
+        </tr>
+        <tr>
+          <td class="w3-blue-gray">Walkthrough</td>
+          <td class="w3-border"><button class="w3-button w3-black w3-round"><a href="#">The Legend of Zelda</a></button></td>
+        </tr>
+      </table>
+    </div>
+    <div class="w3-third w3-container w3-center w3-margin-top">
+      <img src="Images/Zelda-NES-Box-Art.png" class="w3-image" style="max-width: 80%;" alt="Legend of zelda Box Art">
+    </div>
+  </div>
+   <!--End The Legend of Zelda-->
+   <!--The Adventure of Link-->
+  <div id="theAdventureOfLink" class="w3-row w3-container w3-grey w3-padding-64 game adventureOfLinkNESBg" style="display:none">
+    <div class="w3-container w3-twothird">
+      <div class="w3-container w3-margin-bottom">
+        <h1 class="w3-text-sand w3-center w3-xxxlarge w3-black w3-round-xxlarge">The Adventure of Link</h1>
+        <h2 class="w3-text-amber w3-xxlarge w3-red w3-round-xxlarge w3-center">STORY</h2>
+        <p class="w3-large w3-blue-gray w3-padding w3-round-xlarge">
+          Hyrule was on the road to ruin; though Ganon had been defeated, his evil influence remained, and his underlings now sought the blood of Link, the hero who had defeated Ganon, so they could use it to revive him.
+          Link lent his hand to the kingdom's restoration, but one day near his 16th birthday, he discoverd a mark on the back of his hand that was identical to the kingdom's crest. Worried, he visited Zelda's nursemaid, Impa,
+          who was shocked by the mark and took Link to North Castle, were Link opened a door that only he could open and found a sleeping woman. The woman was another Princess Zelda.
+        </p>
+      </div>  
+      <table class="w3-table-all w3-card-4" style="width: 80%;">
+        <tr class="w3-black">
+          <th class="w3-center" colspan="2">Release</th>
+        </tr>
+        <tr>
+          <td class="w3-blue-gray">Platform</td>
+          <td class="w3-border">NES</td>
+        </tr>
+        <tr>
+          <td class="w3-blue-gray">Date</td>
+          <td class="w3-border">December 1, 1988</td>
+        </tr>
+        <tr class="w3-black">
+          <th class="w3-center" colspan="2">Credits</th>
+        </tr>
+        <tr>
+          <td class="w3-blue-gray">Developer</td>
+          <td class="w3-border">Nintendo EAD</td>
+        </tr>
+        <tr>
+          <td class="w3-blue-gray">Producer</td>
+          <td class="w3-border">Shigeru Miyamoto</td>
+        </tr>
+        <tr>
+          <td class="w3-blue-gray">Director</td>
+          <td class="w3-border">Tadashi Sugiyama, Yoichi Yamada</td>
+        </tr>
+        <tr class="w3-black">
+          <th class="w3-center" colspan="2">Guide</th>
+        </tr>
+        <tr>
+          <td class="w3-blue-gray">Walkthrough</td>
+          <td class="w3-border"><button class="w3-button w3-black w3-round"><a href="#">The Adventure of Link</a></button></td>
+        </tr>
+      </table>
+    </div>
+    <div class="w3-third w3-container w3-center w3-margin-top">
+      <img src="Images/ZeldaIIboxart.jpg" class="w3-image" alt="The Adventure of Link Box Art">
+    </div>
+  </div>
+  <!--End The Adventure of Link-->
+  <!--A Link to the Past-->
+  <div id="aLinkToThePast" class="w3-row w3-container w3-grey w3-padding-64 game aLinkToThePastSNESBg" style="display:none">
+    <div class="w3-container w3-twothird">
+      <div class="w3-container w3-margin-bottom">
+        <h1 class="w3-text-sand w3-center w3-xxxlarge w3-black w3-round-xxlarge">A Link to the Past</h1>
+        <h2 class="w3-text-amber w3-xxlarge w3-red w3-round-xxlarge w3-center">STORY</h2>
+        <p class="w3-large w3-blue-gray w3-padding w3-round-xlarge">
+          Long ago, in the beautiful kingdom of Hyrule surrounded by mountains and forests... legends told of an omnipotent and omniscient Golden Power taht resided in a hidden land. <br>
+          Many people aggressively sought to enter the hidden Golden Land... But no one ever returned. One day evil power began to flow from the Golden Land... <br>
+          So the King commanded seven wise men to seal the gate to the Land of the Golden Power. That seal should have remained for all time... But, when these events were obscured by the mists of time and became legend... <br>
+          A mysterious wizard known as Sgahnim came to Hyrule to release the seal. He eliminated the good King of Hyrule... <br>
+          Through evil magic, he began to make descendants of the seven wise men vanish, one after another. And the time of destiny for Princess Zelda is drawing near.
+        </p>
+      </div>  
+      <table class="w3-table-all w3-card-4" style="width: 80%;">
+        <tr class="w3-black">
+          <th class="w3-center" colspan="2">Release</th>
+        </tr>
+        <tr>
+          <td class="w3-blue-gray">Platform</td>
+          <td class="w3-border">SNES</td>
+        </tr>
+        <tr>
+          <td class="w3-blue-gray">Date</td>
+          <td class="w3-border">April 13, 1992</td>
+        </tr>
+        <tr class="w3-black">
+          <th class="w3-center" colspan="2">Credits</th>
+        </tr>
+        <tr>
+          <td class="w3-blue-gray">Developer</td>
+          <td class="w3-border">Nintendo EAD</td>
+        </tr>
+        <tr>
+          <td class="w3-blue-gray">Producer</td>
+          <td class="w3-border">Shigeru Miyamoto</td>
+        </tr>
+        <tr>
+          <td class="w3-blue-gray">Director</td>
+          <td class="w3-border">Takashi Tezuka</td>
+        </tr>
+        <tr class="w3-black">
+          <th class="w3-center" colspan="2">Guide</th>
+        </tr>
+        <tr>
+          <td class="w3-blue-gray">Walkthrough</td>
+          <td class="w3-border"><button class="w3-button w3-black w3-round"><a href="#">A link to the Past</a></button></td>
+        </tr>
+      </table>
+    </div>
+    <div class="w3-third w3-container w3-center w3-margin-top">
+      <img src="Images/Link_to_the_Past_BoxArt.jpg" class="w3-image" alt="Legend of zelda Link to the Past Box Art">
+    </div>
+  </div>
+  <!--End A Link to the Past-->
+  <!--Link's Awakening-->
+  <div id="linksAwakening" class="w3-row w3-container w3-grey w3-padding-64 game linksAwakeningSwitchBg" style="display:none">
+    <div class="w3-container w3-twothird">
+      <div class="w3-container w3-margin-bottom">
+        <h1 class="w3-text-sand w3-center w3-xxxlarge w3-black w3-round-xxlarge">Link's Awakening</h1>
+        <h2 class="w3-text-amber w3-xxlarge w3-red w3-round-xxlarge w3-center">STORY</h2>
+        <p class="w3-large w3-blue-gray w3-padding w3-round-xlarge">
+          After defeating Ganon in A Link to the Past, Link decides to go on a journey to prepare himself in case such an evil returns. <br>
+          During this journey, Link's ship falls prey to a storm. Link wakes up on the beach of the mysterious island of Koholint, where he 
+          must gather eight instruments in order to wake the Wind Fish sleeping atop Mt. Tamaranch and leave the island.
+        </p>
+      </div>  
+      <table class="w3-table-all w3-card-4" style="width: 80%;">
+        <tr class="w3-black">
+          <th class="w3-center" colspan="2">Release</th>
+        </tr>
+        <tr>
+          <td class="w3-blue-gray">Platform</td>
+          <td class="w3-border">SWITCH</td>
+        </tr>
+        <tr>
+          <td class="w3-blue-gray">Date</td>
+          <td class="w3-border">September 20, 2019</td>
+        </tr>
+        <tr class="w3-black">
+          <th class="w3-center" colspan="2">Credits</th>
+        </tr>
+        <tr>
+          <td class="w3-blue-gray">Developer</td>
+          <td class="w3-border">Grezzo</td>
+        </tr>
+        <tr>
+          <td class="w3-blue-gray">Publisher</td>
+          <td class="w3-border">Nintendo Co., Ltd.</td>
+        </tr>
+        <tr class="w3-black">
+          <th class="w3-center" colspan="2">Guide</th>
+        </tr>
+        <tr>
+          <td class="w3-blue-gray">Walkthrough</td>
+          <td class="w3-border"><button class="w3-button w3-black w3-round"><a href="#">Link's Awakening</a></button></td>
+        </tr>
+      </table>
+    </div>
+    <div class="w3-third w3-container w3-center w3-margin-top">
+      <img src="Images/La19-boxart.png" class="w3-image" alt="Legend of zelda Link's Awakening Box Art">
+    </div>
+  </div>
+  <!--End A Link's Awakening-->
+  <!--Ocarina of Time-->
+  <div id="ocarinaOfTime" class="w3-row w3-container w3-grey w3-padding-64 game ocarinaOfTimeN64Bg" style="display:none">
+    <div class="w3-container w3-twothird">
+      <div class="w3-container w3-margin-bottom">
+        <h1 class="w3-text-sand w3-center w3-xxxlarge w3-black w3-round-xxlarge">Ocarina of Time</h1>
+        <h2 class="w3-text-amber w3-xxlarge w3-red w3-round-xxlarge w3-center">STORY</h2>
+        <p class="w3-large w3-blue-gray w3-padding w3-round-xlarge">
+          The Gerudo King and evil wizard, Ganondorf's rise to power and the hero, Link's quest to defeat him and return peace to the land of Hyrule once again. <br>
+          Using the Ocarina of Time to travel 7 years in to the future and back to find the Medllions and save the Kingdom of Hyrule.
+        </p>
+      </div>  
+      <table class="w3-table-all w3-card-4" style="width: 80%;">
+        <tr class="w3-black">
+          <th class="w3-center" colspan="2">Release</th>
+        </tr>
+        <tr>
+          <td class="w3-blue-gray">Platform</td>
+          <td class="w3-border">Nintendo 64</td>
+        </tr>
+        <tr>
+          <td class="w3-blue-gray">Date</td>
+          <td class="w3-border">November 23, 1998</td>
+        </tr>
+        <tr class="w3-black">
+          <th class="w3-center" colspan="2">Credits</th>
+        </tr>
+        <tr>
+          <td class="w3-blue-gray">Developer</td>
+          <td class="w3-border">Nintendo EAD</td>
+        </tr>
+        <tr>
+          <td class="w3-blue-gray">Producer</td>
+          <td class="w3-border">Shigeru Miyamoto</td>
+        </tr>
+        <tr>
+          <td class="w3-blue-gray">Director</td>
+          <td class="w3-border">Shigeru Miyamoto, Yoichi Yamada <br> Eiji Aonuma, Yoshiaki Koizumi</td>
+        </tr>
+        <tr class="w3-black">
+          <th class="w3-center" colspan="2">Guide</th>
+        </tr>
+        <tr>
+          <td class="w3-blue-gray">Walkthrough</td>
+          <td class="w3-border"><button class="w3-button w3-black w3-round"><a href="Ocarina_of_Time/ocarinaOfTime.html">Ocarina of Time</a></button></td>
+        </tr>
+      </table>
+    </div>
+    <div class="w3-third w3-container w3-center w3-margin-top">
+      <img src="Images/OoTBoxArt.jpg" class="w3-image" alt="Legend of zelda Ocarina of Time Box Art">
+    </div>
+  </div>
+  <!--End Ocarina of Time-->
+  <!--Majora's Mask-->
+  <div id="majorasMask" class="w3-row w3-container w3-grey w3-padding-64 game majorasMaskN64Bg" style="display:none">
+    <div class="w3-container w3-twothird">
+      <div class="w3-container w3-margin-bottom">
+        <h1 class="w3-text-sand w3-center w3-xxxlarge w3-black w3-round-xxlarge">Majora's Mask</h1>
+        <h2 class="w3-text-amber w3-xxlarge w3-red w3-round-xxlarge w3-center">STORY</h2>
+        <p class="w3-large w3-blue-gray w3-padding w3-round-xlarge">
+          A Skull Kid has caused mischief across the new world called Termina and that he is trying to make the Moon to fall and destroy the world at the end of the third day. <br>
+          Using the Song of Time to reverse time three days and using the power of the masks. Link must stop the skull kid before he succeeds in destroying the world.
+        </p>
+      </div>  
+      <table class="w3-table-all w3-card-4" style="width: 80%;">
+        <tr class="w3-black">
+          <th class="w3-center" colspan="2">Release</th>
+        </tr>
+        <tr>
+          <td class="w3-blue-gray">Platform</td>
+          <td class="w3-border">Nintendo 64</td>
+        </tr>
+        <tr>
+          <td class="w3-blue-gray">Date</td>
+          <td class="w3-border">October 26, 2000</td>
+        </tr>
+        <tr class="w3-black">
+          <th class="w3-center" colspan="2">Credits</th>
+        </tr>
+        <tr>
+          <td class="w3-blue-gray">Developer</td>
+          <td class="w3-border">Nintendo EAD</td>
+        </tr>
+        <tr>
+          <td class="w3-blue-gray">Producer</td>
+          <td class="w3-border">Shigeru Miyamoto</td>
+        </tr>
+        <tr>
+          <td class="w3-blue-gray">Director</td>
+          <td class="w3-border">Eiji Aonuma, Yoshiaki Koizumi</td>
+        </tr>
+        <tr class="w3-black">
+          <th class="w3-center" colspan="2">Guide</th>
+        </tr>
+        <tr>
+          <td class="w3-blue-gray">Walkthrough</td>
+          <td class="w3-border"><button class="w3-button w3-black w3-round"><a href="#">Majora's Mask,</a></button></td>
+        </tr>
+      </table>
+    </div>
+    <div class="w3-third w3-container w3-center w3-margin-top">
+      <img src="Images/MMBoxArt.jpg" class="w3-image" alt="Legend of zelda Majora's Mask Box Art">
+    </div>
+  </div>
+  <!--End Majora's Mask-->
+  <!--Oracle of Seasons-->
+  <div id="oracleOfSeasons" class="w3-row w3-container w3-grey w3-padding-64 game" style="display:none">
+    <div class="w3-container w3-twothird">
+      <div class="w3-container w3-margin-bottom">
+        <h1 class="w3-text-sand w3-center w3-xxxlarge w3-black w3-round-xxlarge">Oracle of Seasons</h1>
+        <h2 class="w3-text-amber w3-xxlarge w3-red w3-round-xxlarge w3-center">STORY</h2>
+        <p class="w3-large w3-blue-gray w3-padding w3-round-xlarge">
+          
+        </p>
+      </div>  
+      <table class="w3-table-all w3-card-4" style="width: 80%;">
+        <tr class="w3-black">
+          <th class="w3-center" colspan="2">Release</th>
+        </tr>
+        <tr>
+          <td class="w3-blue-gray">Platform</td>
+          <td class="w3-border">NES</td>
+        </tr>
+        <tr>
+          <td class="w3-blue-gray">Date</td>
+          <td class="w3-border">December 1, 1988</td>
+        </tr>
+        <tr class="w3-black">
+          <th class="w3-center" colspan="2">Credits</th>
+        </tr>
+        <tr>
+          <td class="w3-blue-gray">Developer</td>
+          <td class="w3-border">Nintendo EAD</td>
+        </tr>
+        <tr>
+          <td class="w3-blue-gray">Producer</td>
+          <td class="w3-border">Shigeru Miyamoto</td>
+        </tr>
+        <tr>
+          <td class="w3-blue-gray">Director</td>
+          <td class="w3-border">Tadashi Sugiyama Yoichi Yamada</td>
+        </tr>
+        <tr class="w3-black">
+          <th class="w3-center" colspan="2">Guide</th>
+        </tr>
+        <tr>
+          <td class="w3-blue-gray">Walkthrough</td>
+          <td class="w3-border"><button class="w3-button w3-black w3-round"><a href="#">A link to the Past</a></button></td>
+        </tr>
+      </table>
+    </div>
+    <div class="w3-third w3-container w3-center w3-margin-top">
+      <img src="Images/Oracle-of-Seasons-Box.jpg" class="w3-image" alt="Legend of zelda Oracle of Seasons Box Art">
+    </div>
+  </div>
+  <!--End Orcale of Seasons-->
+  <!--Oracle of Ages-->
+  <div id="oracleOfAges" class="w3-row w3-container w3-grey w3-padding-64 game" style="display:none">
+    <div class="w3-container w3-twothird">
+      <div class="w3-container w3-margin-bottom">
+        <h1 class="w3-text-sand w3-center w3-xxxlarge w3-black w3-round-xxlarge">Oracle of Ages</h1>
+        <h2 class="w3-text-amber w3-xxlarge w3-red w3-round-xxlarge w3-center">STORY</h2>
+        <p class="w3-large w3-blue-gray w3-padding w3-round-xlarge">
+          
+        </p>
+      </div>  
+      <table class="w3-table-all w3-card-4" style="width: 80%;">
+        <tr class="w3-black">
+          <th class="w3-center" colspan="2">Release</th>
+        </tr>
+        <tr>
+          <td class="w3-blue-gray">Platform</td>
+          <td class="w3-border">NES</td>
+        </tr>
+        <tr>
+          <td class="w3-blue-gray">Date</td>
+          <td class="w3-border">December 1, 1988</td>
+        </tr>
+        <tr class="w3-black">
+          <th class="w3-center" colspan="2">Credits</th>
+        </tr>
+        <tr>
+          <td class="w3-blue-gray">Developer</td>
+          <td class="w3-border">Nintendo EAD</td>
+        </tr>
+        <tr>
+          <td class="w3-blue-gray">Producer</td>
+          <td class="w3-border">Shigeru Miyamoto</td>
+        </tr>
+        <tr>
+          <td class="w3-blue-gray">Director</td>
+          <td class="w3-border">Tadashi Sugiyama Yoichi Yamada</td>
+        </tr>
+        <tr class="w3-black">
+          <th class="w3-center" colspan="2">Guide</th>
+        </tr>
+        <tr>
+          <td class="w3-blue-gray">Walkthrough</td>
+          <td class="w3-border"><button class="w3-button w3-black w3-round"><a href="#">A link to the Past</a></button></td>
+        </tr>
+      </table>
+    </div>
+    <div class="w3-third w3-container w3-center w3-margin-top">
+      <img src="Images/400px-Oracle-of-Ages-Box.jpg" class="w3-image" alt="Legend of zelda Oracle of Ages Box Art">
+    </div>
+  </div>
+  <!--End Orcale of Ages-->
+  <!--The Wind Waker-->
+  <div id="theWindWaker" class="w3-row w3-container w3-grey w3-padding-64 game" style="display:none">
+    <div class="w3-container w3-twothird">
+      <div class="w3-container w3-margin-bottom">
+        <h1 class="w3-text-sand w3-center w3-xxxlarge w3-black w3-round-xxlarge">The Wind Waker</h1>
+        <h2 class="w3-text-amber w3-xxlarge w3-red w3-round-xxlarge w3-center">STORY</h2>
+        <p class="w3-large w3-blue-gray w3-padding w3-round-xlarge">
+          
+        </p>
+      </div>  
+      <table class="w3-table-all w3-card-4" style="width: 80%;">
+        <tr class="w3-black">
+          <th class="w3-center" colspan="2">Release</th>
+        </tr>
+        <tr>
+          <td class="w3-blue-gray">Platform</td>
+          <td class="w3-border">NES</td>
+        </tr>
+        <tr>
+          <td class="w3-blue-gray">Date</td>
+          <td class="w3-border">December 1, 1988</td>
+        </tr>
+        <tr class="w3-black">
+          <th class="w3-center" colspan="2">Credits</th>
+        </tr>
+        <tr>
+          <td class="w3-blue-gray">Developer</td>
+          <td class="w3-border">Nintendo EAD</td>
+        </tr>
+        <tr>
+          <td class="w3-blue-gray">Producer</td>
+          <td class="w3-border">Shigeru Miyamoto</td>
+        </tr>
+        <tr>
+          <td class="w3-blue-gray">Director</td>
+          <td class="w3-border">Tadashi Sugiyama Yoichi Yamada</td>
+        </tr>
+        <tr class="w3-black">
+          <th class="w3-center" colspan="2">Guide</th>
+        </tr>
+        <tr>
+          <td class="w3-blue-gray">Walkthrough</td>
+          <td class="w3-border"><button class="w3-button w3-black w3-round"><a href="#">A link to the Past</a></button></td>
+        </tr>
+      </table>
+    </div>
+    <div class="w3-third w3-container w3-center w3-margin-top">
+      <img src="Images/WWBoxArt.jpg" class="w3-image" alt="Legend of zelda The Wind Waker Box Art">
+    </div>
+  </div>
+  <!--End The Wind Waker-->
+  <!--The Minish Cap-->
+  <div id="theMinishCap" class="w3-row w3-container w3-grey w3-padding-64 game" style="display:none">
+    <div class="w3-container w3-twothird">
+      <div class="w3-container w3-margin-bottom">
+        <h1 class="w3-text-sand w3-center w3-xxxlarge w3-black w3-round-xxlarge">The Minish Cap</h1>
+        <h2 class="w3-text-amber w3-xxlarge w3-red w3-round-xxlarge w3-center">STORY</h2>
+        <p class="w3-large w3-blue-gray w3-padding w3-round-xlarge">
+          
+        </p>
+      </div>  
+      <table class="w3-table-all w3-card-4" style="width: 80%;">
+        <tr class="w3-black">
+          <th class="w3-center" colspan="2">Release</th>
+        </tr>
+        <tr>
+          <td class="w3-blue-gray">Platform</td>
+          <td class="w3-border">NES</td>
+        </tr>
+        <tr>
+          <td class="w3-blue-gray">Date</td>
+          <td class="w3-border">December 1, 1988</td>
+        </tr>
+        <tr class="w3-black">
+          <th class="w3-center" colspan="2">Credits</th>
+        </tr>
+        <tr>
+          <td class="w3-blue-gray">Developer</td>
+          <td class="w3-border">Nintendo EAD</td>
+        </tr>
+        <tr>
+          <td class="w3-blue-gray">Producer</td>
+          <td class="w3-border">Shigeru Miyamoto</td>
+        </tr>
+        <tr>
+          <td class="w3-blue-gray">Director</td>
+          <td class="w3-border">Tadashi Sugiyama Yoichi Yamada</td>
+        </tr>
+        <tr class="w3-black">
+          <th class="w3-center" colspan="2">Guide</th>
+        </tr>
+        <tr>
+          <td class="w3-blue-gray">Walkthrough</td>
+          <td class="w3-border"><button class="w3-button w3-black w3-round"><a href="#">A link to the Past</a></button></td>
+        </tr>
+      </table>
+    </div>
+    <div class="w3-third w3-container w3-center w3-margin-top">
+      <img src="Images/Minish-Cap-Cover.jpg" class="w3-image" alt="Legend of zelda The Minish Cap Box Art">
+    </div>
+  </div>
+  <!--End The Wind Waker-->
+  <!--Twilight Princess -->
+  <div id="twilightPrincess" class="w3-row w3-container w3-grey w3-padding-64 game" style="display:none">
+    <div class="w3-container w3-twothird">
+      <div class="w3-container w3-margin-bottom">
+        <h1 class="w3-text-sand w3-center w3-xxxlarge w3-black w3-round-xxlarge">Twilight Princess</h1>
+        <h2 class="w3-text-amber w3-xxlarge w3-red w3-round-xxlarge w3-center">STORY</h2>
+        <p class="w3-large w3-blue-gray w3-padding w3-round-xlarge">
+          
+        </p>
+      </div>  
+      <table class="w3-table-all w3-card-4" style="width: 80%;">
+        <tr class="w3-black">
+          <th class="w3-center" colspan="2">Release</th>
+        </tr>
+        <tr>
+          <td class="w3-blue-gray">Platform</td>
+          <td class="w3-border">NES</td>
+        </tr>
+        <tr>
+          <td class="w3-blue-gray">Date</td>
+          <td class="w3-border">December 1, 1988</td>
+        </tr>
+        <tr class="w3-black">
+          <th class="w3-center" colspan="2">Credits</th>
+        </tr>
+        <tr>
+          <td class="w3-blue-gray">Developer</td>
+          <td class="w3-border">Nintendo EAD</td>
+        </tr>
+        <tr>
+          <td class="w3-blue-gray">Producer</td>
+          <td class="w3-border">Shigeru Miyamoto</td>
+        </tr>
+        <tr>
+          <td class="w3-blue-gray">Director</td>
+          <td class="w3-border">Tadashi Sugiyama Yoichi Yamada</td>
+        </tr>
+        <tr class="w3-black">
+          <th class="w3-center" colspan="2">Guide</th>
+        </tr>
+        <tr>
+          <td class="w3-blue-gray">Walkthrough</td>
+          <td class="w3-border"><button class="w3-button w3-black w3-round"><a href="#">A link to the Past</a></button></td>
+        </tr>
+      </table>
+    </div>
+    <div class="w3-third w3-container w3-center w3-margin-top">
+      <img src="Images/200px-Twilight_Princess_NOA_cover_-_TPGCN.jpg" class="w3-image" alt="Legend of zelda Twilight Princess Cap Box Art">
+    </div>
+  </div>
+  <!--End Twilight Princess -->
+  <!--Phantom Hourglass -->
+  <div id="phantomHourglass" class="w3-row w3-container w3-grey w3-padding-64 game" style="display:none">
+    <div class="w3-container w3-twothird">
+      <div class="w3-container w3-margin-bottom">
+        <h1 class="w3-text-sand w3-center w3-xxxlarge w3-black w3-round-xxlarge">Phantom Hourglass</h1>
+        <h2 class="w3-text-amber w3-xxlarge w3-red w3-round-xxlarge w3-center">STORY</h2>
+        <p class="w3-large w3-blue-gray w3-padding w3-round-xlarge">
+          
+        </p>
+      </div>  
+      <table class="w3-table-all w3-card-4" style="width: 80%;">
+        <tr class="w3-black">
+          <th class="w3-center" colspan="2">Release</th>
+        </tr>
+        <tr>
+          <td class="w3-blue-gray">Platform</td>
+          <td class="w3-border">NES</td>
+        </tr>
+        <tr>
+          <td class="w3-blue-gray">Date</td>
+          <td class="w3-border">December 1, 1988</td>
+        </tr>
+        <tr class="w3-black">
+          <th class="w3-center" colspan="2">Credits</th>
+        </tr>
+        <tr>
+          <td class="w3-blue-gray">Developer</td>
+          <td class="w3-border">Nintendo EAD</td>
+        </tr>
+        <tr>
+          <td class="w3-blue-gray">Producer</td>
+          <td class="w3-border">Shigeru Miyamoto</td>
+        </tr>
+        <tr>
+          <td class="w3-blue-gray">Director</td>
+          <td class="w3-border">Tadashi Sugiyama Yoichi Yamada</td>
+        </tr>
+        <tr class="w3-black">
+          <th class="w3-center" colspan="2">Guide</th>
+        </tr>
+        <tr>
+          <td class="w3-blue-gray">Walkthrough</td>
+          <td class="w3-border"><button class="w3-button w3-black w3-round"><a href="#">A link to the Past</a></button></td>
+        </tr>
+      </table>
+    </div>
+    <div class="w3-third w3-container w3-center w3-margin-top">
+      <img src="Images/TLOZ_PH_box_art.jpg" class="w3-image" alt="Legend of zelda Phantom Hourglass Box Art">
+    </div>
+  </div>
+  <!--End Phantom Hourglass -->
+  <!--Spirit Tracks -->
+  <div id="spiritTracks" class="w3-row w3-container w3-grey w3-padding-64 game" style="display:none">
+    <div class="w3-container w3-twothird">
+      <div class="w3-container w3-margin-bottom">
+        <h1 class="w3-text-sand w3-center w3-xxxlarge w3-black w3-round-xxlarge">Spirit Tracks</h1>
+        <h2 class="w3-text-amber w3-xxlarge w3-red w3-round-xxlarge w3-center">STORY</h2>
+        <p class="w3-large w3-blue-gray w3-padding w3-round-xlarge">
+          
+        </p>
+      </div>  
+      <table class="w3-table-all w3-card-4" style="width: 80%;">
+        <tr class="w3-black">
+          <th class="w3-center" colspan="2">Release</th>
+        </tr>
+        <tr>
+          <td class="w3-blue-gray">Platform</td>
+          <td class="w3-border">NES</td>
+        </tr>
+        <tr>
+          <td class="w3-blue-gray">Date</td>
+          <td class="w3-border">December 1, 1988</td>
+        </tr>
+        <tr class="w3-black">
+          <th class="w3-center" colspan="2">Credits</th>
+        </tr>
+        <tr>
+          <td class="w3-blue-gray">Developer</td>
+          <td class="w3-border">Nintendo EAD</td>
+        </tr>
+        <tr>
+          <td class="w3-blue-gray">Producer</td>
+          <td class="w3-border">Shigeru Miyamoto</td>
+        </tr>
+        <tr>
+          <td class="w3-blue-gray">Director</td>
+          <td class="w3-border">Tadashi Sugiyama Yoichi Yamada</td>
+        </tr>
+        <tr class="w3-black">
+          <th class="w3-center" colspan="2">Guide</th>
+        </tr>
+        <tr>
+          <td class="w3-blue-gray">Walkthrough</td>
+          <td class="w3-border"><button class="w3-button w3-black w3-round"><a href="#">A link to the Past</a></button></td>
+        </tr>
+      </table>
+    </div>
+    <div class="w3-third w3-container w3-center w3-margin-top">
+      <img src="Images/400px-Spirit-Tracks-Cover.jpg" class="w3-image" alt="Legend of zelda Spirit Tracks Box Art">
+    </div>
+  </div>
+  <!--End Spirit Tracks -->
+  <!--Skyward Sword -->
+  <div id="skywardSword" class="w3-row w3-container w3-grey w3-padding-64 game" style="display:none">
+    <div class="w3-container w3-twothird">
+      <div class="w3-container w3-margin-bottom">
+        <h1 class="w3-text-sand w3-center w3-xxxlarge w3-black w3-round-xxlarge">Skyward Sword</h1>
+        <h2 class="w3-text-amber w3-xxlarge w3-red w3-round-xxlarge w3-center">STORY</h2>
+        <p class="w3-large w3-blue-gray w3-padding w3-round-xlarge">
+          
+        </p>
+      </div>  
+      <table class="w3-table-all w3-card-4" style="width: 80%;">
+        <tr class="w3-black">
+          <th class="w3-center" colspan="2">Release</th>
+        </tr>
+        <tr>
+          <td class="w3-blue-gray">Platform</td>
+          <td class="w3-border">NES</td>
+        </tr>
+        <tr>
+          <td class="w3-blue-gray">Date</td>
+          <td class="w3-border">December 1, 1988</td>
+        </tr>
+        <tr class="w3-black">
+          <th class="w3-center" colspan="2">Credits</th>
+        </tr>
+        <tr>
+          <td class="w3-blue-gray">Developer</td>
+          <td class="w3-border">Nintendo EAD</td>
+        </tr>
+        <tr>
+          <td class="w3-blue-gray">Producer</td>
+          <td class="w3-border">Shigeru Miyamoto</td>
+        </tr>
+        <tr>
+          <td class="w3-blue-gray">Director</td>
+          <td class="w3-border">Tadashi Sugiyama Yoichi Yamada</td>
+        </tr>
+        <tr class="w3-black">
+          <th class="w3-center" colspan="2">Guide</th>
+        </tr>
+        <tr>
+          <td class="w3-blue-gray">Walkthrough</td>
+          <td class="w3-border"><button class="w3-button w3-black w3-round"><a href="#">A link to the Past</a></button></td>
+        </tr>
+      </table>
+    </div>
+    <div class="w3-third w3-container w3-center w3-margin-top">
+      <img src="Images/400px-Skyward_Sword_NA_Box_Art.jpg" class="w3-image" alt="Legend of zelda Skyward Sword Box Art">
+    </div>
+  </div>
+  <!--End Skyward Sword -->
+  <!--Link between Worlds -->
+  <div id="linkBetweenWorlds" class="w3-row w3-container w3-grey w3-padding-64 game" style="display:none">
+    <div class="w3-container w3-twothird">
+      <div class="w3-container w3-margin-bottom">
+        <h1 class="w3-text-sand w3-center w3-xxxlarge w3-black w3-round-xxlarge">Link Between Worlds</h1>
+        <h2 class="w3-text-amber w3-xxlarge w3-red w3-round-xxlarge w3-center">STORY</h2>
+        <p class="w3-large w3-blue-gray w3-padding w3-round-xlarge">
+          
+        </p>
+      </div>  
+      <table class="w3-table-all w3-card-4" style="width: 80%;">
+        <tr class="w3-black">
+          <th class="w3-center" colspan="2">Release</th>
+        </tr>
+        <tr>
+          <td class="w3-blue-gray">Platform</td>
+          <td class="w3-border">NES</td>
+        </tr>
+        <tr>
+          <td class="w3-blue-gray">Date</td>
+          <td class="w3-border">December 1, 1988</td>
+        </tr>
+        <tr class="w3-black">
+          <th class="w3-center" colspan="2">Credits</th>
+        </tr>
+        <tr>
+          <td class="w3-blue-gray">Developer</td>
+          <td class="w3-border">Nintendo EAD</td>
+        </tr>
+        <tr>
+          <td class="w3-blue-gray">Producer</td>
+          <td class="w3-border">Shigeru Miyamoto</td>
+        </tr>
+        <tr>
+          <td class="w3-blue-gray">Director</td>
+          <td class="w3-border">Tadashi Sugiyama Yoichi Yamada</td>
+        </tr>
+        <tr class="w3-black">
+          <th class="w3-center" colspan="2">Guide</th>
+        </tr>
+        <tr>
+          <td class="w3-blue-gray">Walkthrough</td>
+          <td class="w3-border"><button class="w3-button w3-black w3-round"><a href="#">A link to the Past</a></button></td>
+        </tr>
+      </table>
+    </div>
+    <div class="w3-third w3-container w3-center w3-margin-top">
+      <img src="Images/A-Link-Between-Worlds-Box-Art.jpg" class="w3-image" alt="Legend of zelda Link Between Worlds Box Art">
+    </div>
+  </div>
+  <!--End Link Between Worlds -->
+  <!--Breath of the Wild -->
+  <div id="breathOfTheWild" class="w3-row w3-container w3-grey w3-padding-64 game" style="display:none">
+    <div class="w3-container w3-twothird">
+      <div class="w3-container w3-margin-bottom">
+        <h1 class="w3-text-sand w3-center w3-xxxlarge w3-black w3-round-xxlarge">Breath of the Wild</h1>
+        <h2 class="w3-text-amber w3-xxlarge w3-red w3-round-xxlarge w3-center">STORY</h2>
+        <p class="w3-large w3-blue-gray w3-padding w3-round-xlarge">
+          
+        </p>
+      </div>  
+      <table class="w3-table-all w3-card-4" style="width: 80%;">
+        <tr class="w3-black">
+          <th class="w3-center" colspan="2">Release</th>
+        </tr>
+        <tr>
+          <td class="w3-blue-gray">Platform</td>
+          <td class="w3-border">NES</td>
+        </tr>
+        <tr>
+          <td class="w3-blue-gray">Date</td>
+          <td class="w3-border">December 1, 1988</td>
+        </tr>
+        <tr class="w3-black">
+          <th class="w3-center" colspan="2">Credits</th>
+        </tr>
+        <tr>
+          <td class="w3-blue-gray">Developer</td>
+          <td class="w3-border">Nintendo EAD</td>
+        </tr>
+        <tr>
+          <td class="w3-blue-gray">Producer</td>
+          <td class="w3-border">Shigeru Miyamoto</td>
+        </tr>
+        <tr>
+          <td class="w3-blue-gray">Director</td>
+          <td class="w3-border">Tadashi Sugiyama Yoichi Yamada</td>
+        </tr>
+        <tr class="w3-black">
+          <th class="w3-center" colspan="2">Guide</th>
+        </tr>
+        <tr>
+          <td class="w3-blue-gray">Walkthrough</td>
+          <td class="w3-border"><button class="w3-button w3-black w3-round"><a href="#">A link to the Past</a></button></td>
+        </tr>
+      </table>
+    </div>
+    <div class="w3-third w3-container w3-center w3-margin-top">
+      <img src="Images/308px-NintendoSwitch_TLOZBreathoftheWild_boxart.jpg" class="w3-image" alt="Legend of zelda Breath of the Wild Box Art">
+    </div>
+  </div>
+  <!--End Breath of the Wild -->
+  <!--Tears of the Kingdom -->
+  <div id="tearsOfTheKingdom" class="w3-row w3-container w3-grey w3-padding-64 game" style="display:none">
+    <div class="w3-container w3-twothird">
+      <div class="w3-container w3-margin-bottom">
+        <h1 class="w3-text-sand w3-center w3-xxxlarge w3-black w3-round-xxlarge">Tears of the Kingdom</h1>
+        <h2 class="w3-text-amber w3-xxlarge w3-red w3-round-xxlarge w3-center">STORY</h2>
+        <p class="w3-large w3-blue-gray w3-padding w3-round-xlarge">
+          
+        </p>
+      </div>  
+      <table class="w3-table-all w3-card-4" style="width: 80%;">
+        <tr class="w3-black">
+          <th class="w3-center" colspan="2">Release</th>
+        </tr>
+        <tr>
+          <td class="w3-blue-gray">Platform</td>
+          <td class="w3-border">NES</td>
+        </tr>
+        <tr>
+          <td class="w3-blue-gray">Date</td>
+          <td class="w3-border">December 1, 1988</td>
+        </tr>
+        <tr class="w3-black">
+          <th class="w3-center" colspan="2">Credits</th>
+        </tr>
+        <tr>
+          <td class="w3-blue-gray">Developer</td>
+          <td class="w3-border">Nintendo EAD</td>
+        </tr>
+        <tr>
+          <td class="w3-blue-gray">Producer</td>
+          <td class="w3-border">Shigeru Miyamoto</td>
+        </tr>
+        <tr>
+          <td class="w3-blue-gray">Director</td>
+          <td class="w3-border">Tadashi Sugiyama Yoichi Yamada</td>
+        </tr>
+        <tr class="w3-black">
+          <th class="w3-center" colspan="2">Guide</th>
+        </tr>
+        <tr>
+          <td class="w3-blue-gray">Walkthrough</td>
+          <td class="w3-border"><button class="w3-button w3-black w3-round"><a href="#">A link to the Past</a></button></td>
+        </tr>
+      </table>
+    </div>
+    <div class="w3-third w3-container w3-center w3-margin-top">
+      <img src="Images/309px-Switch_TLOZ_TOTK_boxart_01.jpg" class="w3-image" alt="Legend of zelda Tears of the Kingdom Wild Box Art">
+    </div>
+  </div>
+  <!--End Tears of the Kingdom -->
+  <!--Echoes of Wisdom -->
+  <div id="echoesOfWisdom" class="w3-row w3-container w3-grey w3-padding-64 game" style="display:none">
+    <div class="w3-container w3-twothird">
+      <div class="w3-container w3-margin-bottom">
+        <h1 class="w3-text-sand w3-center w3-xxxlarge w3-black w3-round-xxlarge">Echoes of Wisdom</h1>
+        <h2 class="w3-text-amber w3-xxlarge w3-red w3-round-xxlarge w3-center">STORY</h2>
+        <p class="w3-large w3-blue-gray w3-padding w3-round-xlarge">
+          
+        </p>
+      </div>  
+      <table class="w3-table-all w3-card-4" style="width: 80%;">
+        <tr class="w3-black">
+          <th class="w3-center" colspan="2">Release</th>
+        </tr>
+        <tr>
+          <td class="w3-blue-gray">Platform</td>
+          <td class="w3-border">NES</td>
+        </tr>
+        <tr>
+          <td class="w3-blue-gray">Date</td>
+          <td class="w3-border">December 1, 1988</td>
+        </tr>
+        <tr class="w3-black">
+          <th class="w3-center" colspan="2">Credits</th>
+        </tr>
+        <tr>
+          <td class="w3-blue-gray">Developer</td>
+          <td class="w3-border">Nintendo EAD</td>
+        </tr>
+        <tr>
+          <td class="w3-blue-gray">Producer</td>
+          <td class="w3-border">Shigeru Miyamoto</td>
+        </tr>
+        <tr>
+          <td class="w3-blue-gray">Director</td>
+          <td class="w3-border">Tadashi Sugiyama Yoichi Yamada</td>
+        </tr>
+        <tr class="w3-black">
+          <th class="w3-center" colspan="2">Guide</th>
+        </tr>
+        <tr>
+          <td class="w3-blue-gray">Walkthrough</td>
+          <td class="w3-border"><button class="w3-button w3-black w3-round"><a href="#">A link to the Past</a></button></td>
+        </tr>
+      </table>
+    </div>
+    <div class="w3-third w3-container w3-center w3-margin-top">
+      <img src="Images/400px-NintendoSwitch_TLOZEchoes_of_Wisdom_boxart.jpg" class="w3-image" alt="Legend of zelda Echoes of Wisdom Wild Box Art">
+    </div>
+  </div>
+  <!--End Echoes of Wisdom -->
+ 
+
+  <!-- Pagination -->
+  <div class="w3-center w3-padding-32">
+    <div class="w3-bar">
+      <a class="w3-button w3-black" href="#">1</a>
+      <a class="w3-button w3-hover-black" href="#">2</a>
+      <a class="w3-button w3-hover-black" href="#">3</a>
+      <a class="w3-button w3-hover-black" href="#">4</a>
+      <a class="w3-button w3-hover-black" href="#">5</a>
+      <a class="w3-button w3-hover-black" href="#">»</a>
+    </div>
+  </div>
+
+  <footer id="myFooter">
+    <div class="w3-container w3-theme-l2 w3-padding-32">
+      <h4>Footer</h4>
+    </div>
+
+    <div class="w3-container w3-theme-l1">
+      <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+    </div>
+  </footer>
+
+<!-- END MAIN -->
+</div>
+
+<script src="JS/gamewalkthroughs.js"></script>
+
+</body>
+</html>
