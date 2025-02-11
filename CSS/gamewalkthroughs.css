@@ -84,11 +84,22 @@ html {
     width: 50%;
 }
 
+/*Image*/
+
+.imageHov:hover {
+    cursor: pointer;
+}
+
 /*button*/
 
 button > a {
     text-decoration: none;  
     
+}
+
+.buttonHov:hover {
+    background-color: cadetblue !important;
+    color: #000 !important;
 }
 
 /*Media Queries*/

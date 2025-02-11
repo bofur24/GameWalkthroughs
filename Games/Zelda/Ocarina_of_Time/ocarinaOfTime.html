@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>GW | Ocarina of Time</title>
+<title>GW | Kokiri Forest</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="/CSS/gamewalkthroughs.css">
 <style>
 html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
 .w3-sidebar {
@@ -42,6 +43,12 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
   <a class="w3-bar-item w3-button w3-hover-black" href="#">Heart Pieces</a>
   <a class="w3-bar-item w3-button w3-hover-black" href="#">Gold Skulltulas</a>
   <a class="w3-bar-item w3-button w3-hover-black" href="#">Side Quests</a>
+  <a class="w3-bar-item w3-button w3-hover-black" onclick="document.getElementById('LOTZModalControler').style.display='block'">
+    Controler    
+  </a>
+  <div id="LOTZModalControler" class="w3-modal w3-animate-zoom" onclick="this.style.display='none'">
+    <img class="w3-modal-content" src="LZOTImages/Gamecube_Controls.png" alt="Gamecube Controls">
+  </div>  
 </nav>
 
 <!-- Overlay effect when opening sidebar on small screens -->
@@ -51,37 +58,143 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
 <div class="w3-main" style="margin-left:250px">
 
   <div class=" w3-padding-64 w3-blue-gray">
-    <div class="w3-container">
-      <h1 class="w3-text-sand">Legend of Zelda: Ocarina of Time</h1>
-      <h2>Walkthrough</h2>
+    <div class="w3-container w3-center w3-text-sand">
+      <h1 class="w3-xxxlarge">Legend of Zelda: Ocarina of Time</h1>
+      <h2 class="w3-xxlarge">Walkthrough</h2>      
     </div>
   </div>
-  <div class="w3-container">
-    <p>This walkthrough was played on the Nintendo GameCube. When you start up the game you need to create a new game file.</p>
-    <div class="w3-center">
-      <img src="LZOTImages/SaveFile.PNG" alt="Savefile">
+  <div class="bgVideoContainer">
+    <video autoplay muted loop class="bgVideo">
+      <source src="LZOTVideos/Zelda_OoT_Intro.mp4" type="video/mp4">      
+    </video>
+  </div>
+
+  <div class="w3-container w3-xlarge w3-text-teal">
+    <h2 class="w3-xxlarge w3-center w3-text-red w3-bottombar w3-border-red">Intro</h2>
+    <p>
+      This walkthrough was played on the Nintendo Gamecube. The original game was released on Nintendo 64 back in 1998, this game was released in 2003. 
+      When you get past the title screen you will create your own save file. You can name yourself whatever you like within the number of characters allowed.</p>
+    <div class="w3-center w3-section">
+      <img src="LZOTImages/SaveFile.PNG" alt="Savefile" onclick="document.getElementById('LOTZModalSaveFile').style.display='block'" class="w3-hover-opacity w3-border-teal w3-topbar w3-leftbar w3-rightbar w3-bottombar w3-hover-border-red imageHov">
+      <div id="LOTZModalSaveFile" class="w3-modal w3-animate-zoom" onclick="this.style.display='none'">
+        <img class="w3-modal-content" src="LZOTImages/SaveFile.PNG" alt="SaveFile">
+      </div>
     </div>  
+    <p>
+      The game starts with the Great Deku talking of a young boy without a fairy. Then transitions to a drawbridge coming down from a castle where a lady and young lady come running out of the castle on horseback.
+      As they run past the boy, he turns to see another dark figure stare him down. You see the boy in shock from the dark stare from the man.
+    </p>
+    <p>
+      Back to he Great Deku tree speaking to a fairy of the name of Navi. The Great Deku tree speaks to Navi of the evil descending upon the realm. The Great Deku trees' power is nothing compared to this evil.
+      It is time for the boy without a fairy to begin his journey. The Great Deku tree instructs Navi to find the boy and guide him to the Great Deku tree.
+    </p>
+    <div class="w3-center w3-section">
+      <img src="LZOTImages/Charaters/Fairy_Navi.png" alt="Navi" onclick="document.getElementById('LOTZModalFairyNavi').style.display='block'" class="w3-hover-opacity w3-border-teal w3-topbar w3-leftbar w3-rightbar w3-bottombar w3-hover-border-red imageHov">
+      <div id="LOTZModalFairyNavi" class="w3-modal w3-animate-zoom" onclick="this.style.display='none'">
+        <img class="w3-modal-content" src="LZOTImages/Charaters/Fairy_Navi.png" alt="Navi">
+      </div>
+    </div> 
+    <h2 class="w3-xxlarge w3-center w3-text-red w3-bottombar w3-border-red">Kokiri Forest</h2>
+    <p>
+      Navi flies off to find Link, Navi finds Link asleep in his home. Navi then wakes Link to inform him that the Great Deku tree has summed him and Navi the fairy will be your new partner.
+      As Link steps out of his house he is greeted by Saria.
+    </p>
+    <div class="w3-center w3-section">
+      <img src="LZOTImages/Charaters/Saria.png" alt="Saria" onclick="document.getElementById('LOTZModalSaria').style.display='block'" class="w3-hover-opacity w3-border-teal w3-topbar w3-leftbar w3-rightbar w3-bottombar w3-hover-border-red imageHov">
+      <div id="LOTZModalSaria" class="w3-modal w3-animate-zoom" onclick="this.style.display='none'">
+        <img class="w3-modal-content" src="LZOTImages/Charaters/Saria.png" alt="Saria">
+      </div>
+    </div>
+    <p>
+      She is excited that a fairy has come to Links aid. Saria instructs Link to not let the Great Deku tree wait to see you.
+      Head to the east towards the Great Deku tree. Cross the small amount of water and then you are stopped by a Kokiri boy.
+      He states that you are not a real man with out a fairy, but then sees that Link has one indeed. Mido is shocked by the 
+      news that you are going to see the Great Deku tree. He refuses to let you by without being properly equipped. 
+      You need to find a sword and shield. Your new task is to find a Sword and Shield.
+    </p>
+    <div class="w3-center w3-section">
+      <img src="LZOTImages/Charaters/Mido.png" alt="Mido" onclick="document.getElementById('LOTZModalMido').style.display='block'" class="w3-hover-opacity w3-border-teal w3-topbar w3-leftbar w3-rightbar w3-bottombar w3-hover-border-red imageHov">
+      <div id="LOTZModalMido" class="w3-modal w3-animate-zoom" onclick="this.style.display='none'">
+        <img class="w3-modal-content" src="LZOTImages/Charaters/Mido.png" alt="Mido">
+      </div>
+    </div>
+    <p>
+      When you turn around Navi may have some information for you. Press the UP C BUTTON. This information is a way to remind you what your next task is.
+      Navi informs you that the Great Deku tree has summoned you. Head back west to the hill next to your tree house. This area is called the Forest Training Center.
+      This area has many signs that will teach you different techniques of combat so when you get your sword it can be good to try them out.
+      At the top you will come to a small crawl space you need to enter. This small maze is where you will find your sword. The major danger is the large bolder rolling around the area. 
+      When you come to the Large Chest open it to receive the Kokiri Sword. Enter your equipment screen and equip your new sword. 
+    </p>
+    <div class="w3-center w3-section">
+      <img src="LZOTImages/Items/Item_Kokiri_Sword.PNG" alt="Kokiri Sword" onclick="document.getElementById('LOTZModalKokiriSword').style.display='block'" class="w3-hover-opacity w3-border-teal w3-topbar w3-leftbar w3-rightbar w3-bottombar w3-hover-border-red imageHov">
+      <div id="LOTZModalKokiriSword" class="w3-modal w3-animate-zoom" onclick="this.style.display='none'">
+        <img class="w3-modal-content" src="LZOTImages/Items/Item_Kokiri_Sword.PNG" alt="Kokiri Sword">
+      </div>
+    </div>
+    <P>
+      Now that you have your sword read the signs and practice your sword play. Once you leave the Forest Training Center to the west is the house of the Know-it-All Brothers.
+      They will teach you about different game elements. The first one you come to will teach you about the Yellow Icons or the C Buttons and about the Green Icon, the Action Icon or the A Button.
+      The next borther will teach you how to use C Icons. The last bother has information about the Map and Items. Once you have talked to all three leave the house and move to the north house.
+      This is Midos house, as you enter his home you see four chest. Each chest has items that you will learn about as you open them. The two on the farside of the house are Blue Rupees, the closer chest 
+      are a Recovery Heart and a Green Rupee. Out side of Midos house you will see a Kokiri kid trying to pick up a rock. Pick them up and throw them to receive some rupees.
+    </P>
+    <div class="w3-center w3-section">
+      <img src="LZOTImages/Charaters/Kokiri_Kid_Picking_Up_Rocks.png" alt="Kokiri Kid Picking Up Rocks" onclick="document.getElementById('LOTZModalKokiriKidRocks').style.display='block'" class="w3-hover-opacity w3-border-teal w3-topbar w3-leftbar w3-rightbar w3-bottombar w3-hover-border-red imageHov">
+      <div id="LOTZModalKokiriKidRocks" class="w3-modal w3-animate-zoom" onclick="this.style.display='none'">
+        <img class="w3-modal-content" src="LZOTImages/Charaters/Kokiri_Kid_Picking_Up_Rocks.png" alt="Kokiri Kid Picking Up Rocks">
+      </div>
+    </div>
+    <p>
+      Head to the east next to your house to visit Saria's house. There is a Kokiri kid outiside cutting the grass for Mido. Cut the grass your self to gain some rupees. When you enter Saria's house you will find 
+      Recovery Hearts. On the roof of Saria's house, you can walk along the bridge to reach another young lady hanging around and you can receive a Blue Rupee.
+    </p>
+    <div class="w3-center w3-section">
+      <img src="LZOTImages/Charaters/Kokiri_Girl_At_End_Of_Bridge.png" alt="Kokiri Girl at end of bridge" onclick="document.getElementById('LOTZModalKokiriGirlBridge').style.display='block'" class="w3-hover-opacity w3-border-teal w3-topbar w3-leftbar w3-rightbar w3-bottombar w3-hover-border-red imageHov">
+      <div id="LOTZModalKokiriGirlBridge" class="w3-modal w3-animate-zoom" onclick="this.style.display='none'">
+        <img class="w3-modal-content" src="LZOTImages/Charaters/Kokiri_Girl_At_End_Of_Bridge.png" alt="Kokiri Girl at end of bridge">
+      </div>
+    </div>
+    <p>
+      The house next to Saria's is the Twins' house. One of the twins are home and will inform Link of the different types of Rupees. The last building you need to enter is the Kokiri Shop.
+      Before entering you are called upon by the other twin on the roof. She teaches Link how to use his fairy partner Navi to talk to her at a distance.
+    </p>
+    <div class="w3-center w3-section">
+      <img src="LZOTImages/Charaters/Kokiri_Girl_On_The_Kokiri_Shop.png" alt="Kokiri Girl on the Kokiri Shop" onclick="document.getElementById('LOTZModalKokiriGirlRoof').style.display='block'" class="w3-hover-opacity w3-border-teal w3-topbar w3-leftbar w3-rightbar w3-bottombar w3-hover-border-red imageHov">
+      <div id="LOTZModalKokiriGirlRoof" class="w3-modal w3-animate-zoom" onclick="this.style.display='none'">
+        <img class="w3-modal-content" src="LZOTImages/Charaters/Kokiri_Girl_On_The_Kokiri_Shop.png" alt="Kokiri Girl on the Kokiri Shop">
+      </div>
+    </div>
+    <p>
+      Enter the Kokiri Shop to see the items for sale. You only need to buy the Deku Shield for 40 Rupees. If you don't have enough, you can go cut grass, throw rocks, break jars in the homes 
+      and run in the tall grass to gain the Rupees you need.
+    </p>
+    <div class="w3-center w3-section">
+      <img src="LZOTImages/Items/Item_Deku_Shield.PNG" alt="Deku Shield" onclick="document.getElementById('LOTZModalDekuShield').style.display='block'" class="w3-hover-opacity w3-border-teal w3-topbar w3-leftbar w3-rightbar w3-bottombar w3-hover-border-red imageHov">
+      <div id="LOTZModalDekuShield" class="w3-modal w3-animate-zoom" onclick="this.style.display='none'">
+        <img class="w3-modal-content" src="LZOTImages/Items/Item_Deku_Shield.PNG" alt="Deku Shield">
+      </div>
+    </div>
+    <p>
+      Now return to Mido to show him you are now equipped and ready to go see the Great Deku Tree.
+    </p>
+
   </div>
 
   <!-- Pagination -->
   <div class="w3-center w3-padding-32">
     <div class="w3-bar">
-      <a class="w3-button w3-black" href="#">1</a>
-      <a class="w3-button w3-hover-black" href="#">2</a>
-      <a class="w3-button w3-hover-black" href="#">3</a>
-      <a class="w3-button w3-hover-black" href="#">4</a>
-      <a class="w3-button w3-hover-black" href="#">5</a>
-      <a class="w3-button w3-hover-black" href="#">»</a>
+      <a class="w3-button w3-teal buttonHov w3-round-large" href="theGreatDekuTree.html">The Great Deku Tree <i class="fa fa-arrow-right"></i></a>
     </div>
   </div>
 
   <footer id="myFooter">
-    <div class="w3-container w3-theme-l2 w3-padding-32">
-      <h4>Footer</h4>
+    <div class="w3-container w3-theme-l2 w3-padding-32 w3-center w3-bar w3-xxlarge">
+      <a target="_blank" href="https://github.com/bofur24"><i class="fa fa-github w3-margin w3-hover-text-black"></i></a>
+      <a target="_blank" href="https://khwebdesigns.com"><i class="fa fa-desktop w3-hover-text-black"></i></a>
     </div>
 
     <div class="w3-container w3-theme-l1">
-      <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+      <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp">w3.css</a></p>
     </div>
   </footer>
 
