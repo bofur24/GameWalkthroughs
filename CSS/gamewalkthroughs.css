@@ -4,6 +4,10 @@ html {
     scroll-behavior: smooth;
 }
 
+/*Container*/
+
+
+
 /*Background*/
 
 .legendOfZeldaNESBg {
@@ -54,12 +58,50 @@ html {
     background-repeat: no-repeat;
 }
 
+
+/*background Video*/
+
+.bgVideoContainer {
+    position: relative;
+    overflow: hidden;
+}
+
+.bgVideo {
+    min-width: 100%;
+    min-height: 100%;
+    height: 100%;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+}
+
+/* Modal Image*/
+
+.modalImage {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
 /*button*/
 
 button > a {
     text-decoration: none;  
     
 }
+
+/*Media Queries*/
+
+@media screen and (min-width: 1000px) {
+    .w3-container p {
+    max-width: 800px;    
+    margin: auto;
+    }
+    
+} 
+
+
 
 
 
