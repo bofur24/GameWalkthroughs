@@ -105,7 +105,8 @@ button > a {
 /*Media Queries*/
 
 @media screen and (min-width: 1000px) {
-    .w3-container p {
+    .w3-container p,
+    .w3-container ul {
     max-width: 800px;    
     margin: auto;
     }
